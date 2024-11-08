@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buhnalog</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="center">
+        <Nav>
+            <a href=""><img src="{{ url_for('static', filename='logo.png') }}" alt="" width="250px" height="75px" class="logo"></a>
+            <ul class="nav">
+                <li class="nav_item"><a href="#contacts" class="nav_link"><p>Контакты</p></a></li>
+                <li class="nav_item"><a href="#pricelink" class="nav_link"><p>Прайс</p></a></li>
+                <li class="nav_item formlin" id="link"><a href="#formlink" class="nav_link"><p class="formlink">Записаться</p></a></li>
+            </ul>
+        </Nav>
+        
+        <div class="main">
+
+            <div class="left">
+
+                <h1>Бухгалтерские услуги</h1>
+                <h2>Для вашего бизнеса</h2>
+                
+                <p id="text_main">Поможем вам:<br>
+                    <img src="{{ url_for('static', filename='Check Mark Button.svg') }}" alt="" id="checkmarkbtn">Сдаем все виды отчетов ИП и ООО<br>
+                    <img src="{{ url_for('static', filename='Check Mark Button.svg') }}" alt="" id="checkmarkbtn">3-ндфл (вычеты)<br>
+                    <img src="{{ url_for('static', filename='Check Mark Button.svg') }}" alt="" id="checkmarkbtn">Справки БК при трудоустройстве в госслужбу<br>
+                    <img src="{{ url_for('static', filename='Check Mark Button.svg') }}" alt="" id="checkmarkbtn">Обучаем бизнес как вести бухгалтерию<br>
+                    <img src="{{ url_for('static', filename='Check Mark Button.svg') }}" alt="" id="checkmarkbtn">Курсы для тех, кто хочет стать бухгалтером и т. д.<br>
+                    <img src="{{ url_for('static', filename='Check Mark Button.svg') }}" alt="" id="checkmarkbtn">Бесплатно ИП и ООО без посещения налоговой</p>
+
+            </div>
+
+            <div class="right"><img src="{{ url_for('static', filename='main_photo.png') }}" alt="" width="600px" height="600px"></div>
+
+        </div>
+
+        <div class="ndmain">
+
+
+            <div class="leftper">
+                <p>
+                    Для ООО и ИП:<br>
+                    <img src="{{ url_for('static', filename='Check Mark Button.svg') }}" alt="" id="checkmarkbtn">Введение бухгалтерского и налогового учета<br>
+                    <img src="{{ url_for('static', filename='Check Mark Button.svg') }}" alt="" id="checkmarkbtn">Расчет заработной платы с ФОТ<br>
+                    <img src="{{ url_for('static', filename='Check Mark Button.svg') }}" alt="" id="checkmarkbtn">Составление и сдача отчетности (ФНС, СФР и РОССТАТ)<br>
+                    <img src="{{ url_for('static', filename='Check Mark Button.svg') }}" alt="" id="checkmarkbtn">Консултрование по бухгалтерским и налоговым вопросам<br>
+                    <img src="{{ url_for('static', filename='Check Mark Button.svg') }}" alt="" id="checkmarkbtn">Восстановление бухгалетрского учета<br>
+                    <img src="{{ url_for('static', filename='Check Mark Button.svg') }}" alt="" id="checkmarkbtn">Подготовка документов для кредитования<br>
+                </p>
+                <img src="{{ url_for('static', filename='OOPIP_bg.png') }}" alt="" width="250px" height="250px">
+            </div>
+            
+
+            <div class="rightper">
+                <p>
+                    Для физических лиц:<br>
+                    <img src="{{ url_for('static', filename='Check Mark Button.svg') }}" alt="" id="checkmarkbtn">Декларация 3-ндфл<br>
+                    <img src="{{ url_for('static', filename='Check Mark Button.svg') }}" alt="" id="checkmarkbtn">Налоговые вычеты<br>
+                    <img src="{{ url_for('static', filename='Check Mark Button.svg') }}" alt="" id="checkmarkbtn">Справки БК для Госслужбы<br>
+                </p>
+                <img src="{{ url_for('static', filename='fizlits_bg.png') }}" alt="" width="250px" height="250px">
+            </div>
+
+
+        </div>
+
+        <div class="price" id="pricelink">
+            <h1 id="pricedesc">Цены на услуги</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">№</th>
+                        <th scope="col">Наименование услуг</th>
+                        <th scope="col">Сумма (руб)</th>
+                        <th scope="col">Примечание</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="group-header">
+                        <th scope="row" colspan="4" id="nextcateg" >↓Составление первичных документов↓</th>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">1</th>
+                        <td>Оформление первичных документов (счет, счет-фактура, ПКО, РКО, накладные,акта выполненных работ)</td>
+                        <td>от 500</td>
+                        <td>за каждый документ стоимость в зависимости от номенклатуры</td>
+                    </tr>
+                    <tr class="group-header">
+                        <th scope="row" colspan="4" id="nextcateg">↓Составление и отправка отчетов в ФНС↓</th>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">2</th>
+                        <td colspan="3">Составление и отправка 6-НДФЛ, РСВ,УСН, ЕСХН,НАЛОГ НА ПРИБЫЛЬ, БУХ,БАЛАНС,НДС,ЕУНД, Декларация 4-ФСС (раздел 2 форма ЕФС-1):</td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row"></th>
+                        <td>- нулевые показатели</td>
+                        <td>1000</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row"></th>
+                        <td>- заполнение по данным клиента</td>
+                        <td>1500</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row"></th>
+                        <td>- заполнение и расчет</td>
+                        <td>от 2000</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">3</th>
+                        <td>Отправка уведомления об освобождении от НДС (нулевой)</td>
+                        <td>1000</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">4</th>
+                        <td>Отправка уведомления об освобождении от НДС (по данным клиента)</td>
+                        <td>2000</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">5</th>
+                        <td>Составление и отправка ПСВ</td>
+                        <td>1000</td>
+                        <td>+ 200 руб за каждого работника</td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">7</th>
+                        <td>Составление и отправка уведомлений об исчисленных налогах, авансовых платежей и взносов</td>
+                        <td>1500</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">9</th>
+                        <td>Согласие налогоплательщика на признание сведений, составляющих налоговую тайну, общедоступными</td>
+                        <td>1000</td>
+                        <td>в одном документе</td>
+                    </tr>
+                    <tr class="group-header">
+                        <th scope="row" colspan="4" id="nextcateg">↓Составление налоговой декларации 3-НДФЛ↓</th>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="col" rowspan="3">1</th>
+                        <td colspan="3">Заполнение декларации 3-НДФЛ физическим лицам :</td>
+                    </tr>
+                    <tr class="hidden">
+                        <td>- имущественный вычет</td>
+                        <td>от 1500</td>
+                        <td>в стоимость не входит услуги за консультацию и за работу в личном кабинете</td>
+                    </tr>
+                    <tr class="hidden">
+                        <td>- социальный вычет (лечение, обучение)</td>
+                        <td>от 1000</td>
+                        <td>в зависимости от объема</td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">2</th>
+                        <td>За работу в личном кабинете налогоплательщика (выявление ошибки ранее отправленных деклараций)</td>
+                        <td>1500</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">3</th>
+                        <td>Расчет остатка имущественного вычета по предыдущим периодам</td>
+                        <td>1000</td>
+                        <td>30 минут</td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">4</th>
+                        <td>Консультация  при продаже недвижимости (квартир, домов, зем. учасков, автотранспорта), передачи в дар и другие</td>
+                        <td>1500</td>
+                        <td>30 минут</td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">5</th>
+                        <td>Составление писем, ходатайств по различным ситуациям</td>
+                        <td>от 2500</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">6</th>
+                        <td>Составление жалоб по результатам проверок</td>
+                        <td>от 5000</td>
+                        <td>в зависимости от объема и оспариваемой суммы</td>
+                    </tr>
+                    <tr class="group-header">
+                        <th scope="row" colspan="4" id="nextcateg">↓Патент↓</th>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">1</th>
+                        <td>Составление и отправка заявления на переход</td>
+                        <td>1500</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">2</th>
+                        <td>Заявление о распоряжении положительным сальдо ЕНС путем зачета КНД 1150057</td>
+                        <td>800</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">3</th>
+                        <td>Составление уведомления о уменьшении суммы ПСН</td>
+                        <td>1500</td>
+                        <td></td>
+                    </tr>
+                    <tr class="group-header">
+                        <th scope="row" colspan="4" id="nextcateg">↓ОСНО↓</th>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">1</th>
+                        <td colspan="3">Декларация 3-НДФЛ ИП:</td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row"></th>
+                        <td>- по данным книги доходов и расходов</td>
+                        <td>2000</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row"></th>
+                        <td>- нулевая</td>
+                        <td>1500</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row"></th>
+                        <td>- с формированием книги учета доходов и расходов</td>
+                        <td>договорная</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row"></th>
+                        <td>Налог на прибыль для ООО, НКО, СПК и т.д.</td>
+                        <td>от 1000</td>
+                        <td></td>
+                    </tr>
+                    <tr class="group-header">
+                        <th scope="row" colspan="4" id="nextcateg">↓Налоговые требования:↓</th>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">1</th>
+                        <td>Требования по типичным запросам (нулевая декларация, несоответствие выплаты заработной платы ниже МРОТ, пояснение в связи с несвоевременным предоставлением декларации)</td>
+                        <td>1000</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">2</th>
+                        <td>Требования по запросу СНО</td>
+                        <td>от 2000</td>
+                        <td></td>
+                    </tr>
+                    <tr class="group-header">
+                        <th scope="row" colspan="4" id="nextcateg">↓Прочие услуги:↓</th>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">1</th>
+                        <td>Устные консультации по налоговому, кадровому и бухгалтерскому учету (30 минут)</td>
+                        <td>1500</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">2</th>
+                        <td>Устные консультации у Главного бухгалтера по налоговому, кадровому и бухгалтерскому учету  (30 минут)</td>
+                        <td>2000</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">3</th>
+                        <td>Подготовка трудовых договоров и оформление на работу одного работника (приказ)</td>
+                        <td>3000</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">4</th>
+                        <td>Консультация по 115-ФЗ</td>
+                        <td>от 1500</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row"></th>
+                        <td>"- подготовка ответа по 115-ФЗ</td>
+                        <td>от 10000</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">5</th>
+                        <td>Подготовка протокола / решения</td>
+                        <td>от 1000</td>
+                        <td>в зависимости от количества пунктов</td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">6</th>
+                        <td>Подбор ОКВЭД-ов для юр.лиц, ИП не более 10-ти видов деятельности</td>
+                        <td>500</td>
+                        <td>заполнение (при необходимости консультации за последующие 20 мин оплата 500 руб)</td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">7</th>
+                        <td>Предоставление выписок из ЕГРЮЛ (ЕГРИП)</td>
+                        <td>500</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">8</th>
+                        <td>Предоставление справки о том, что не ИП</td>
+                        <td>300</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">9</th>
+                        <td colspan="3">Подготовка документов к регистрации ООО/СПОК/СПК:</td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row"></th>
+                        <td>- до 5 участников</td>
+                        <td>6000</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row"></th>
+                        <td>- свыше 5 участников</td>
+                        <td>10000</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">10</th>
+                        <td>Восстановление бухгалтерского учета ИП и юр.лицам, находящимся на УСНО, ПСН, ЕСХН</td>
+                        <td>договорная от 10 000 руб</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">11</th>
+                        <td>Восстановление бухгалтерского и налогового учета юридическому лицу на ОСНО с составлением всех форм отчетности (со сдачей в МРИ ФНС)</td>
+                        <td>договорная от 20 000 руб</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">12</th>
+                        <td>Заявления по форме 13014, 11001, 12003, 12016, 15016, 16002, 18002, 21001, 24001, 24002, 26001, 26002</td>
+                        <td>от 1000</td>
+                        <td>+ 200 руб за чел, + 200 руб раздел</td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">13</th>
+                        <td>Электронная отправка заявлений через ЭЦП по формам 13014, 11001, 12003, 12016, 15016, 16002, 18002, 21001, 24001, 24002, 26001, 26002</td>
+                        <td>от 1000</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">14</th>
+                        <td>Сопровождение по электроному бюджету</td>
+                        <td>от 40000</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">15</th>
+                        <td>Обучение по электронному бюджету</td>
+                        <td>30000</td>
+                        <td>2 дня</td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">16</th>
+                        <td>Регистрация, перерегистарция онлайн-кассы</td>
+                        <td>от 1000</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">17</th>
+                        <td>Создание чек коррекции</td>
+                        <td>от 1500</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">20</th>
+                        <td>Абонентское обслуживание индивидуальных предпринимателей</td>
+                        <td>от 4450</td>
+                        <td>для ИП (точный расчет при заключении договора) </td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">21</th>
+                        <td>Абонентское обслуживание юридических лиц</td>
+                        <td>от 8550</td>
+                        <td>для ООО (точный расчет при заключении договора) </td>
+                    </tr>
+                    <tr class="group-header">
+                        <th scope="row" colspan="4" id="nextcateg">↓Тарифы↓</th>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row">1</th>
+                        <td>Пакет "ООО с директором, без оборотов"</td>
+                        <td>7200</td>
+                        <td>в квартал</td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row"></th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row"></th>
+                        <td>Составление налоговой декларации по первичным документам Заказчика: на владельцев транспортных средств, на имущество, на земельный налог</td>
+                        <td>от 1500</td>
+                        <td>в зависимости от объема</td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row"></th>
+                        <td>Составление заявления на переход по выбору системы налогообложения и иные заявления</td>
+                        <td>1500</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row"></th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row"></th>
+                        <td>Копия</td>
+                        <td>15 р/лист</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row"></th>
+                        <td>Распечатка декларации отчетов</td>
+                        <td>30 р/ лист</td>
+                        <td></td>
+                    </tr>
+                    <tr class="hidden">
+                        <th scope="row"></th>
+                        <td>Сканирование документов</td>
+                        <td>15 р/лист</td>  
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="form" id="formlink">
+            <div class="textinform">
+                <p>Записаться на курс или получить бесплатную консультацию</p>
+            </div>
+            <div class="formsend">
+
+                <form  action="/submit" method="POST" id="formdata"   class="form-example">
+                    
+                    <!-- <div class="form-example">
+                      <input type="text" name="name" id="name" placeholder="Имя" required />
+                    </div> -->
+
+
+                    <div class="form-example">
+                      <input type="text" name="name" id="name" placeholder="Имя" required />
+                      <input type="email" name="email" id="email" placeholder="Эл. почта" required />
+                      <input type="tel" name="tel" id="tel" placeholder="+7(123) 456 78-90" required />
+                    </div>
+
+
+                    <div class="form_btn">
+                      <input type="submit" value="Записаться" />
+                    </div>
+                  </form>
+            </div>
+        </div>
+
+        <div class="contacts" id="contacts">
+
+            <div class="address">
+                <h1>Находимся по адресу:<br> г. Кызыл, ул. Кочетова, 53, 17 офис (2 этаж ПСБ)</h1>
+                <h1><a href="tel:+79232651888"><p>+79232651888</p></a></h1>
+            </div>
+
+            <div class="addresonmap">
+                <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/11333/kyzyl/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Кызыл</a><a href="https://yandex.ru/maps/11333/kyzyl/house/ulitsa_kochetova_53/bU0YcgRoT0YAQFtrfXtweHxmZw==/?ll=94.438635%2C51.718929&utm_medium=mapframe&utm_source=maps&z=19.33" style="color:#eee;font-size:12px;position:absolute;top:14px;">Яндекс Карты — транспорт, навигация, поиск мест</a><iframe src="https://yandex.ru/map-widget/v1/?ll=94.438635%2C51.718929&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNDkxNzc3MjMwEljQoNC-0YHRgdC40Y8sINCg0LXRgdC_0YPQsdC70LjQutCwINCi0YvQstCwLCDQmtGL0LfRi9C7LCDRg9C70LjRhtCwINCa0L7Rh9C10YLQvtCy0LAsIDUzIgoNleC8QhVP4E5C&z=19.33" width="500px" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        // Получаем все заголовки групп
+        const groupHeaders = document.querySelectorAll('.group-header');
+
+        groupHeaders.forEach(header => {
+            header.addEventListener('click', () => {
+                // Получаем все строки следующей группы
+                let nextRow = header.nextElementSibling;
+                while (nextRow && !nextRow.classList.contains('group-header')) {
+                    nextRow.classList.toggle('hidden'); // Переключаем видимость
+                    nextRow = nextRow.nextElementSibling; // Переходим к следующей строке
+                }
+            });
+        });
+
+
+        document.getElementById('formdata').addEventListener('submit', function(event) {
+            event.preventDefault(); // Предотвращаем стандартное поведение формы
+        
+            const formData = new FormData(this);
+            
+            fetch('/submit', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(alert("Данные отправлены"))
+            .then(response => response.json())
+            .then(data => {
+                alert('Данные успешно отправлены!');
+                console.log(data);
+            })
+            .catch(error => {
+                console.error('Ошибка:', error);
+            });
+        });
+
+        
+    </script>
+
+</body>
+</html>

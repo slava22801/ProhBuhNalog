@@ -1,0 +1,296 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+.checkmarksvg {
+    width: 15px;
+    width: 15px;
+}
+
+#text_main {
+    margin-top: 100px;
+    font-size: 19px;
+}
+#checkmarkbtn {
+    width: 15px;
+    height: 15px;
+}
+
+h1, h2, p {
+    font-family: "Montserrat";
+    color: white;
+    
+}
+
+body {
+    background: rgb(58,51,166);
+    background: -moz-linear-gradient(138deg, rgba(58,51,166,1) 0%, rgba(9,121,18,1) 35%, rgba(255,162,0,1) 100%);
+    background: -webkit-linear-gradient(138deg, rgba(58,51,166,1) 0%, rgba(9,121,18,1) 35%, rgba(255,162,0,1) 100%);
+    background: linear-gradient(138deg, rgba(58,51,166,1) 0%, rgba(9,121,18,1) 35%, rgba(255,162,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3a33a6",endColorstr="#ffa200",GradientType=1); 
+    margin: 0;
+    padding: 0; 
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: "Montserrat", serif;
+    font-weight: 700;
+    font-style: normal;
+    /* background-size: 1920px; */
+}
+.center {
+    width: 1280px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+    align-self: center;
+    justify-content: center;
+}
+Nav {
+    font-family: "Montserrat";
+    display: flex;
+    justify-content: space-between;
+    flex: 2;
+    flex-wrap: wrap;
+}
+ul {
+    font-family: "Montserrat";
+    list-style-type: none;
+    display: flex;
+}
+li {
+    font-family: "Montserrat";
+}
+a {
+    font-family: "Montserrat";
+    text-decoration: none;
+    color: white;
+    font-family: Montserrat Bold, serif;
+}
+.formlink {
+    font-size: large;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+/* #link {
+    border: 2px solid white;
+    border-radius: 7px;
+    width: 120px;
+    height: 20px;
+    text-align: center;
+    margin-left: 35px;
+} */
+.main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftper {
+    display: flex;
+    font-size: 19px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rightper {
+    display: flex;
+    margin-top: 50px;
+    font-size: 19px;
+    justify-content: space-between;
+    align-items: center;
+}
+#pricedesc {
+    text-align: center;
+}
+table {
+    font-family: "Montserrat";
+    width: 100%;
+    margin: 0 auto;
+    font-size: 20px;
+    color: white;
+}
+th, td {
+    border: 2px solid rgb(82, 80, 80);
+    border-radius: 8px;
+    padding: 5px;
+    background: #494848;
+}
+#nextcateg {
+    background: #6ca115;
+    cursor: pointer;
+}
+.form {
+    color: black;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    display: flex;
+    border: 1px solid white;
+    background: white;
+    border-radius: 15px;
+    height: 250px;
+}
+.form p {
+    color: #000;
+    font-size: 30px;
+}
+.textinform {
+    width: 50%;
+    padding-left: 45px;
+}
+.formsend {
+    padding: 45px;
+    width: 50%;
+}
+input {
+    width: 100%;
+    height: 30px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    font-family: "Montserrat";
+}
+.ndmain {
+    margin-top: 150px;
+}
+.form_btn input {
+    background: blue;
+    color: white;
+}
+.form_btn input:hover {
+    background: black;
+}
+.contacts {
+    display: flex;
+    gap: 50px;
+}
+.addresonmap {
+    width: 50%;
+}
+.hidden {
+    display: none;
+}
+
+
+
+
+.menubtn {
+    width: 45px;
+    height: 45px;
+}
+.bars{
+    display: none;
+    width: 45px;
+    height: 45px;
+}
+.imgbtn {
+    width: 45px;
+    height: 45px;
+}
+
+
+
+
+
+
+
+@media (max-width:1280px){
+    body {
+        width: 100%;
+    }
+    table {
+        font-size: 10px;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 1280px){
+
+    body {
+        width: 100%;
+    }
+    .nav {
+        display: none;
+        width: 100%;
+		position: absolute;
+		top: 100%;
+		left: 0;
+    }
+    
+    Nav {
+        padding: 15px;
+    }
+    .logo {
+        width: 150px;
+        height: 45px;
+    }
+
+    .main {
+        display: block;
+
+    }
+    h1, h2 {
+        text-align:center;
+    }
+    p {
+        font-size: 13px;
+        text-align: center;
+    }
+    #text_main {
+        margin-top: 50px;
+        font-size: 13px;
+    }
+    img {
+        display: block;
+        width: 250px;
+        height: 250px;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .center {
+        width: 100%;
+    }
+    .leftper {
+        display: block;
+    }
+    .rightper {
+        display: block;
+    }
+    img {
+        margin: 0 auto;
+    }
+    table {
+        font-size: 10px;
+        font-family: "Montserrat";
+    }
+    .form p {
+        font-size: 15px;
+        padding-top: 50px;
+        text-align:left;
+    }
+    .form {
+        margin: 10px;
+        font-family: "Montserrat";
+    }
+    .contacts {
+        display: block;
+    }
+    .addresonmap {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and(min-width: 1281px){
+	.nav {
+		display: flex !important;
+	}
+}
